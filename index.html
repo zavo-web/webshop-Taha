@@ -22,6 +22,32 @@
         </div>
       </section>
 
+      <form id="form" role="search">
+        <input type="search" id="query" name="q"
+         placeholder="Search..."
+         aria-label="Search through site content">
+        <button>Search</button>
+      </form>
+<!-- Javascript stuk -->
+      <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+          e.preventDefault(); 
+      
+          const query = document.getElementById("query").value.toLowerCase(); 
+          const products = document.querySelectorAll(".product");       
+         
+          products.forEach((product) => {
+            const productName = product.querySelector(".product-name").textContent.toLowerCase();
+            if (productName.includes(query)) {
+              product.style.display = "block"; 
+            } else {
+              product.style.display = "none"; 
+            }
+          });
+        });
+      </script>
+      
+      
       <div class="dropdown">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
