@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Webshop fietswielen</title>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="https://static.wixstatic.com/media/cf1fa3_f6f1026e94c248b1b49b58dae7f00666~mv2.png/v1/fill/w_300,h_300,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo%20Frame%20v2.png"
+        width="65"
+        alt="logo fiets"
+      />
+
+      <section class="about">
+        <div class="container">
+          <h1 class="text-center">Fietswielen</h1>
+          <div class="about-border"></div>
+        </div>
+      </section>
+
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#populair">Populairste</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <div class="products">
+        <div class="product"><br><br>
+          <img
+            src="https://www.ffwdwheels.com/cdn/shop/files/FFWD-DRIFT-v1_1500x900_50cd24e5-83c8-4f15-8848-3937564baca1_1000x.jpg?v=1687853860"
+            alt="Product 1"
+            class="product-image"
+          />
+          <h2 class="product-name">DT SWISS WIELEN P1800 SPLINE 23 DISC</h2>
+          <p class="product-price">€ 324,95</p>
+        </div>
+
+        <div class="product">
+          <br /><br />
+          <img
+            id="Populair"
+            src="https://www.vaneycksport.com/media/catalog/product/cache/160ad2628a8662eefaec3e119a629bf2/2/7/2750c981-b052-4c7a-a81a-f1aa5d7e4856.jpg"
+            alt="Product 2"
+            class="product-image"
+          />
+          <h2 class="product-name">FAST FORWARD WIELEN TYRO 2.0 45 MM</h2>
+          <p class="product-price">€ 1.099,00</p>
+        </div>
+
+        <div class="product">
+          <br /><br />
+          <img
+            src="https://www.vaneycksport.com/media/catalog/product/cache/160ad2628a8662eefaec3e119a629bf2/8/d/8d365942-338e-45ab-9766-8dfd0fa6eb40_486404-0_43061.jpg"
+            alt="Product 3"
+            class="product-image"
+          />
+          <h2 class="product-name">FULCRUM WIELEN WIND 55 C19 DISC</h2>
+          <p class="product-price">€ 999,95</p>
+        </div>
+      </div>
+    </div>
+
+    <input type="checkbox" id="sidebar-toggle" hidden />
+    <label for="sidebar-toggle" class="sidebar-button">Filters</label>
+
+    <div class="sidenav">
+      <a href="mountainbike.html">Mountainbike Wielen</a>
+      <a href="elektrische.html">Elektrische Fietswielen</a>
+      <a href="stadsfiets.html">Stadsfiets Wielen</a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div id="contact" class="contact-info">
+          <h2>Contactinformatie</h2>
+          <p>Email: info@fietswielen.be</p>
+          <p>Telefoon: +32 123 456 789</p>
+          <p>Adres: fietstraat 123, 1000 Brussel</p>
+        </div>
+
+        <div class="contact-form">
+          <h2>Stuur ons een bericht</h2>
+          <form action="#" method="post">
+            <input type="text" name="name" placeholder="Naam" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea
+              name="message"
+              placeholder="Bericht"
+              rows="4"
+              required
+            ></textarea>
+            <button type="submit">Verzenden</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
