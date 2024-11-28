@@ -4,17 +4,17 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    
     <title>Webshop fietswielen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="header">
-      <img
-        src="image/logo.webp"
-        width="65"
-        alt="logo fiets"
-      />
+      <img src="image/logo.webp" width="65" alt="logo fiets" />
 
       <section class="about">
         <div class="container">
@@ -24,31 +24,38 @@
       </section>
 
       <form id="form" role="search">
-        <input type="search" id="query" name="q"
-         placeholder="Search..."
-         aria-label="Search through site content">
+        <input
+          type="search"
+          id="query"
+          name="q"
+          placeholder="Search..."
+          aria-label="Search through site content"
+        />
         <button>Search</button>
       </form>
-<!-- Javascript stuk -->
+      <!-- Javascript stuk -->
       <script>
-        document.getElementById("form").addEventListener("submit", function (e) {
-          e.preventDefault(); 
-      
-          const query = document.getElementById("query").value.toLowerCase(); 
-          const products = document.querySelectorAll(".product");       
-         
-          products.forEach((product) => {
-            const productName = product.querySelector(".product-name").textContent.toLowerCase();
-            if (productName.includes(query)) {
-              product.style.display = "block"; 
-            } else {
-              product.style.display = "none"; 
-            }
+        document
+          .getElementById("form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const query = document.getElementById("query").value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+
+            products.forEach((product) => {
+              const productName = product
+                .querySelector(".product-name")
+                .textContent.toLowerCase();
+              if (productName.includes(query)) {
+                product.style.display = "block";
+              } else {
+                product.style.display = "none";
+              }
+            });
           });
-        });
       </script>
-      
-      
+
       <div class="dropdown">
         <button class="dropbtn">Menu</button>
         <div class="dropdown-content">
@@ -62,34 +69,35 @@
       <h2>Welkom bij onze webshop!</h2>
       <p>
         Ontdek de beste fietswielen voor jouw fiets. Of je nu een mountainbiker,
-        stadsfietser of een elektrische fietser bent, wij hebben de perfecte wielen
-        voor jou.
+        stadsfietser of een elektrische fietser bent, wij hebben de perfecte
+        wielen voor jou.
       </p>
       <div class="social-links">
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
-        <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon"
+          >Facebook</a
+        >
+        <a href="https://www.instagram.com" target="_blank" class="social-icon"
+          >Instagram</a
+        >
+        <a href="https://www.twitter.com" target="_blank" class="social-icon"
+          >Twitter</a
+        >
       </div>
     </div>
 
-   
-
     <div class="main-section">
-      <div class="products">
-        <div class="product"><br><br>
-          <img
-            src="image/wiel2.webp"
-            alt="Product 1"
-            class="product-image"
-          />
+      <div class="product-container">
+        <div class="product">
+          <img src="image/wiel2.webp" alt="Product 1" class="product-image" />
           <h2 class="product-name">DT SWISS WIELEN P1800 SPLINE 23 DISC</h2>
-          <p class="product-price">€ 324,95</p>
-          ★★★★☆ (4/5)
-          <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
+          <div class="product-actions">
+            <p class="product-price">€ 324,95</p>
+            ★★★★☆ (4/5)
+            <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
+          </div>
         </div>
 
         <div class="product">
-          <br /><br />
           <img
             id="Populair"
             src="image/wiel1.webp"
@@ -97,22 +105,18 @@
             class="product-image"
           />
           <h2 class="product-name">FAST FORWARD WIELEN TYRO 2.0 45 MM</h2>
-          <p class="product-price">€ 1.099,00</p>
-          ★★★★★ (5/5)
-          <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
+          <div class="product-actions">
+            <p class="product-price">€ 324,95</p>
+            ★★★★☆ (4/5)
+            <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
+          </div>
         </div>
-        
 
         <div class="product">
-          <br /><br />
-          <img
-            src="image/wiel3.webp"
-            alt="Product 3"
-            class="product-image"
-          />
+          <img src="image/wiel3.webp" alt="Product 3" class="product-image" />
           <h2 class="product-name">FULCRUM WIELEN WIND 55 C19 DISC</h2>
           <p class="product-price">€ 999,95</p>
-            ★★★★☆ (4/5)
+          ★★★★☆ (4/5)
           <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
         </div>
       </div>
@@ -130,7 +134,19 @@
     </section>
 
     <input type="checkbox" id="sidebar-toggle" hidden />
-    <label for="sidebar-toggle" class="sidebar-button">Filters</label>
+    <label for="sidebar-toggle" class="sidebar-button">
+      <?xml version="1.0" ?><svg
+        height="1792"
+        viewBox="0 0 1792 1792"
+        width="1792"
+        xmlns="http://www.w3.org/2000/svg"
+        class="filter-icon"
+      >
+        <path
+          d="M1595 295q17 41-14 70l-493 493v742q0 42-39 59-13 5-25 5-27 0-45-19l-256-256q-19-19-19-45v-486l-493-493q-31-29-14-70 17-39 59-39h1280q42 0 59 39z"
+        />
+      </svg>
+    </label>
 
     <div class="sidenav">
       <a href="mountainbike.html">Mountainbike Wielen</a>
