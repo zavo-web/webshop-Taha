@@ -21,12 +21,12 @@ body {
   align-items: flex;
   background-color: #333;
   color: white;
-  padding: 1px;
+  padding: 100px;
 }
   
 
 .header h1 {
-  font-size: 3em;
+  font-size: 4em;
 
 }
 
@@ -346,3 +346,12 @@ body {
   font-style: italic;
   color: #555;
 } 
+
+/* Achtergrond */
+.header {
+  background-image: url('image/renner.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgb(0, 0, 0); 
+}
