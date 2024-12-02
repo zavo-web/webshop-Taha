@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ========== ========== -->
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,58 +14,64 @@
     />
   </head>
   <body>
+    
+    <!-- ========== Header ========== -->
     <div class="header">
-      
-
+     
+      <!-- Titel -->
       <section class="about">
         <div class="container">
           <h1 class="text-center">Fietswielen</h1>
-          <div class="about-border"></div>
         </div>
       </section>
+    </div>
 
-      <form id="form" role="search">
-        <input
-          type="search"
-          id="query"
-          name="q"
-          placeholder="Search..." 
-          aria-label="Search through site content"
-        />
-        <button>Search</button>
-      </form>
-      <!-- Javascript stuk -->
-      <script>
-        document
-          .getElementById("form")
-          .addEventListener("submit", function (e) {
-            e.preventDefault();
 
-            const query = document.getElementById("query").value.toLowerCase();
-            const products = document.querySelectorAll(".product");
+     <!-- Zoekbalk -->
+     <form id="form" role="search">
+      <input
+        type="search"
+        id="query"
+        name="q"
+        placeholder="Search..." 
+        aria-label="Search through site content"
+      /> 
+      <button>Search</button>
+    </form>
 
-            products.forEach((product) => {
-              const productName = product
-                .querySelector(".product-name")
-                .textContent.toLowerCase();
-              if (productName.includes(query)) {
-                product.style.display = "block";
-              } else {
-                product.style.display = "none";
-              }
-            });
+    <!-- ========== Zoekenbalk Javascript ========== -->
+    <script>
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const query = document.getElementById("query").value.toLowerCase();
+          const products = document.querySelectorAll(".product");
+
+          products.forEach((product) => {
+            const productName = product
+              .querySelector(".product-name")
+              .textContent.toLowerCase();
+            if (productName.includes(query)) {
+              product.style.display = "block";
+            } else {
+              product.style.display = "none";
+            }
           });
-      </script>
+        });
+    </script>
 
-      <div class="dropdown">
-        <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-          <a href="#populair">Populairste</a>
-          <a href="#contact">Contact</a>
-        </div>
+    <!-- ========== Navigatie Menu ========== -->
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="#populair">Populairste</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
 
+    <!-- ========== Webshop Info ========== -->
     <div class="website-info">
       <h2>Welkom bij onze webshop!</h2>
       <p>
@@ -73,20 +80,16 @@
         wielen voor jou.
       </p>
       <div class="social-links">
-        <a href="https://www.facebook.com" target="_blank" class="social-icon"
-          >Facebook</a
-        >
-        <a href="https://www.instagram.com" target="_blank" class="social-icon"
-          >Instagram</a
-        >
-        <a href="https://www.twitter.com" target="_blank" class="social-icon"
-          >Twitter</a
-        >
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
       </div>
     </div>
 
+    <!-- ========== Producten ========== -->
     <div class="main-section">
       <div class="product-container">
+        <!-- Product 1 -->
         <div class="product">
           <img src="image/wiel2.webp" alt="Product 1" class="product-image" />
           <h2 class="product-name">DT SWISS WIELEN P1800 SPLINE 23 DISC</h2>
@@ -97,35 +100,33 @@
           </div>
         </div>
 
+        <!-- Product 2 -->
         <div class="product">
-          <img
-            id="Populair"
-            src="image/wiel1.webp"
-            alt="Product 2"
-            class="product-image"
-          />
+          <img id="Populair" src="image/wiel1.webp" alt="Product 2" class="product-image" />
           <h2 class="product-name">FAST FORWARD WIELEN TYRO 2.0 45 MM</h2>
           <div class="product-actions">
             <p class="product-price">€ 324,95</p>
-            ★★★★☆ (4/5)
+            ★★★★★ (5/5)
             <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
           </div>
         </div>
 
+        <!-- Product 3 -->
         <div class="product">
-          <img src="image/wiel3.webp"
-            alt="Product 3"
-          class="product-image" />
-
+          <img src="image/wiel3.webp" alt="Product 3" class="product-image" />
           <h2 class="product-name">FULCRUM WIELEN WIND 55 C19 DISC</h2>
-        
+          <div class="product-actions">
           <p class="product-price">€ 999,95</p>
+          
           ★★★★☆ (4/5)
           <button class="add-to-cart">Toevoegen aan Winkelwagen</button>
         </div>
+        </div>
       </div>
     </div>
+    
 
+    <!-- ========== Reviews ========== -->
     <section class="reviews">
       <h2>Wat onze klanten zeggen</h2>
       <div class="review">
@@ -138,9 +139,10 @@
       </div>
     </section>
 
+    <!-- ========== Sidebar ========== -->
     <input type="checkbox" id="sidebar-toggle" hidden />
     <label for="sidebar-toggle" class="sidebar-button">
-      <?xml version="1.0" ?><svg
+      <svg
         height="1792"
         viewBox="0 0 1792 1792"
         width="1792"
@@ -159,8 +161,10 @@
       <a href="stadsfiets.html">Stadsfiets Wielen</a>
     </div>
 
+    <!-- ========== Footer ========== -->
     <footer class="footer">
       <div class="footer-content">
+        <!-- Contactinformatie -->
         <div id="contact" class="contact-info">
           <h2>Contactinformatie</h2>
           <p>Email: info@fietswielen.be</p>
@@ -168,6 +172,7 @@
           <p>Adres: fietstraat 123, 1000 Brussel</p>
         </div>
 
+        <!-- Contactformulier -->
         <div class="contact-form">
           <h2>Stuur ons een bericht</h2>
           <form action="#" method="post">
@@ -179,7 +184,7 @@
               rows="4"
               required
             ></textarea>
-            <button type="submit">Verzenden</button>
+            <button type="submit" class="styled-submit">Verzenden</button>
           </form>
         </div>
       </div>

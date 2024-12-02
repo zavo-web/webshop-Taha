@@ -1,4 +1,4 @@
-/* ========== 1. Algemenn ========== */
+/* ========== 1. Algemeen ========== */
 * {
   font-optical-sizing: auto;
   font-style: normal;
@@ -14,9 +14,6 @@ body {
 }
 
 /* ========== 2. Container en Header ========== */
-.container {
-  text-align: center;
-}
 
 .header {
   display: flex;
@@ -24,13 +21,13 @@ body {
   align-items: flex;
   background-color: #333;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 1px;
 }
+  
 
 .header h1 {
-  margin: 0;
-  font-size: 2em;
+  font-size: 3em;
+
 }
 
 /* ========== 3. Menu Dropdown ========== */
@@ -159,7 +156,7 @@ body {
 }
 
 #sidebar-toggle:checked ~ .sidenav {
-  width: 150px;
+  width: 200px;
 }
 
 #sidebar-toggle:checked ~ .main {
@@ -172,6 +169,7 @@ body {
   justify-content: space-around;
   padding: 20px;
 }
+
 
 .product-container {
   display: flex;
@@ -277,6 +275,22 @@ body {
   resize: none;
 }
 
+.styled-submit {
+  background-color: #f57c00; 
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+/* hover */
+.styled-submit:hover {
+  background-color: #d65e00; 
+}
+
+
 /* ========== 8. Extra info ========== */
 .website-info {
   background-color: #f4f4f4;
@@ -331,4 +345,4 @@ body {
   margin-bottom: 15px;
   font-style: italic;
   color: #555;
-}
+} 
