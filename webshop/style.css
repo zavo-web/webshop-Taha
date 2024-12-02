@@ -1,13 +1,39 @@
+/* ========== 1. Algemenn ========== */
 * {
   font-optical-sizing: auto;
   font-style: normal;
   font-family: "Nunito", sans-serif;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* ========== 2. Container en Header ========== */
 .container {
   text-align: center;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: flex;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+/* ========== 3. Menu Dropdown ========== */
 .dropbtn {
   background-color: #dd8f08;
   color: white;
@@ -17,8 +43,9 @@
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: 90px;
 }
 
 .dropdown-content {
@@ -49,53 +76,44 @@
   background-color: #000000;
 }
 
-.header {
+/* ========== 4. Zoekbalk ========== */
+#form {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex;
+  margin: 20px 0;
 }
 
-about-border {
-  width: 200px;
-  height: 3px;
-  background: #f3c577;
-  margin: 20px auto;
-}
-.container {
-  text-align: center;
-}
-.about-border {
+#query {
   width: 300px;
-  height: 3px;
-  background: #f3c577;
+  padding: 5px 5px;
+  font-size: 10px;
+  border: 2px solid #0077b6;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.main-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
+#query:focus {
+  border-color: #005f86;
 }
 
-.product-image {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+#form button {
+  padding: 10px 20px;
+  background-color: #0077b6;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.product-name {
-  font-size: 1.2em;
-  margin: 10px 0;
+#form button:hover {
+  background-color: #005f86;
 }
 
-.product-price {
-  font-size: 1em;
-  color: #dd8f08;
-}
-
-.product:hover {
-  transform: scale(1.05);
-}
-
+/* ========== 5. Sidebar ========== */
 .sidebar-button {
   font-size: 30px;
   position: fixed;
@@ -144,41 +162,76 @@ about-border {
   width: 150px;
 }
 
-.main {
-  transition: margin-left 0.3s;
-  padding: 20px;
-}
-
 #sidebar-toggle:checked ~ .main {
   margin-left: 150px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #f8f8f8;
-}
-
-.header {
-  background-color: #333;
-  color: white;
+/* ========== 6. Producten ========== */
+.main-section {
+  display: flex;
+  justify-content: space-around;
   padding: 20px;
+}
+
+.product-container {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.2s;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 2em;
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.main-section h1 {
-  font-size: 2.5em;
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: bold;
   color: #333;
-  margin-bottom: 20px;
+  margin: 10px 0;
 }
 
+.product-price {
+  font-size: 1.2rem;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #ca9a0a;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #005f86;
+}
+
+/* ========== 7. Footer (contact) ========== */
 .footer {
   background-color: #3a3333;
   color: rgb(209, 105, 14);
@@ -224,6 +277,7 @@ body {
   resize: none;
 }
 
+/* ========== 8. Extra info ========== */
 .website-info {
   background-color: #f4f4f4;
   padding: 20px;
@@ -260,7 +314,7 @@ body {
 .social-links a:hover {
   background-color: #005f86;
 }
-
+/* ========== 9. reviews ========== */
 .reviews {
   background-color: #f9f9f9;
   padding: 30px;
@@ -277,93 +331,4 @@ body {
   margin-bottom: 15px;
   font-style: italic;
   color: #555;
-}
-
-.product-container {
-  display: flex;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.product {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 20px;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  transition: 0.2s;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.product-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.product img {
-  /* max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px; */
-}
-
-.product-name {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  margin: 10px 0;
-}
-
-.product-price {
-  font-size: 1.2rem;
-  color: #0077b6;
-  font-weight: bold;
-}
-
-.add-to-cart {
-  background-color: #ca9a0a;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
-}
-
-.add-to-cart:hover {
-  background-color: #005f86;
-}
-
-/* Elektrische fiets wiel */
-.back-to-home {
-  text-decoration: none;
-  color: white;
-  background-color: #0077b6;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.back-to-home:hover {
-  background-color: #005f86;
-}
-
-.filter-icon {
-  width: 20px;
-  height: 20px;
 }

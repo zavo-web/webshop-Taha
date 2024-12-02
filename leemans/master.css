@@ -43,5 +43,8 @@
     display: block;
 }
 
+.tabs__content > :first-child {
+    margin-top: 0;
 
+}
 
